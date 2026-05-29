@@ -53,10 +53,8 @@
     position: relative;
     width: 140px;
     height: 170px;
-    position: relative;
     margin-bottom: 16px;
-    margin-top: 50px; 
-    
+    margin-top: 50px;
     padding: 12px;
     box-sizing: content-box;
     opacity: 0;
@@ -202,6 +200,19 @@
   }
 
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  @media (max-width: 480px) {
+    .scene {
+      justify-content: center;
+      padding-top: 0;
+    }
+    .eye-wrap {
+      width: 90px;
+      height: 110px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
 
   /* Corner lines */
   .corner {
