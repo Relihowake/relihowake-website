@@ -43,16 +43,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 80px;
     z-index: 1;
   }
 
   /* Eye SVG */
   .eye-wrap {
     position: relative;
-    width: 100px;
-    height: 122px;
-    margin-bottom: 36px;
+    width: 140px;
+    height: 170px;
+    position: relative;
+    margin-bottom: 16px;
+    margin-top: 50px; 
+    
     padding: 12px;
     box-sizing: content-box;
     opacity: 0;
@@ -113,7 +117,7 @@
   /* Tagline */
   .tagline {
     font-family: 'Share Tech Mono', monospace;
-    font-size: clamp(11px, 1.5vw, 13px);
+    font-size: clamp(14px, 1.5vw, 16px);
     letter-spacing: 0.35em;
     color: var(--gold-dim);
     text-transform: uppercase;
@@ -124,7 +128,7 @@
 
   /* Game block */
   .game-block {
-    margin-top: 64px;
+    margin-top: 54px;
     text-align: center;
     opacity: 0;
     animation: fadeUp 1s ease 1.3s forwards;
@@ -158,19 +162,21 @@
   /* Countdown */
   .countdown {
     display: flex;
-    gap: 40px;
+    gap: clamp(10px, 3.5vw, 40px);
     margin-top: 56px;
     opacity: 0;
     animation: fadeUp 1s ease 1.6s forwards;
+    padding: 0 16px;
   }
 
   .cd-item {
     text-align: center;
+    min-width: 0;
   }
 
   .cd-num {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(32px, 5vw, 52px);
+    font-size: clamp(22px, 7vw, 52px);
     color: var(--fg);
     line-height: 1;
     letter-spacing: 0.05em;
@@ -178,8 +184,8 @@
 
   .cd-label {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.45em;
+    font-size: clamp(7px, 1.5vw, 9px);
+    letter-spacing: 0.3em;
     color: var(--fg-dim);
     margin-top: 6px;
     text-transform: uppercase;
@@ -187,11 +193,12 @@
 
   .cd-sep {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
+    font-size: clamp(20px, 6vw, 40px);
     color: var(--gold-dim);
     align-self: flex-start;
-    margin-top: 6px;
+    margin-top: 4px;
     animation: blink 1s step-end infinite;
+    flex-shrink: 0;
   }
 
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
